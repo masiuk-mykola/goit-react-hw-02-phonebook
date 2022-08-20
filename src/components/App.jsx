@@ -8,13 +8,15 @@ export class App extends Component {
   state = {
     contacts: [],
     name: '',
+    number: '',
   };
 
-  handleSubmitForm = obj => {
-    const { name } = obj;
+  handleSubmitForm = contact => {
+    // console.log(obj);
+    // const { contact } = obj;
 
     this.setState(prevState => ({
-      contacts: [...prevState.contacts, name],
+      contacts: [contact, ...prevState.contacts],
     }));
   };
 

@@ -4,8 +4,8 @@ export const ContactList = ({ contacts }) => {
   return (
     <ul>
       {contacts.map(item => {
-        console.log(item.id);
-        return <ContactItem key={item.id} item={item.name} />;
+        const { name, id, number } = item;
+        return <ContactItem key={id} name={name} number={number} />;
       })}
     </ul>
   );
