@@ -16,10 +16,13 @@ export class App extends Component {
   };
 
   handleSubmitForm = contact => {
-    console.log(contact);
-    this.setState(prevState => ({
-      contacts: [contact, ...prevState.contacts],
-    }));
+    this.state.contacts.find(
+      item => item.name.toLowerCase() === contact.name.toLowerCase()
+    )
+      ? alert(` ${contact.name} is already in contacts`)
+      : this.setState(prevState => ({
+          contacts: [contact, ...prevState.contacts],
+        }));
   };
 
   changeFilter = e => {
