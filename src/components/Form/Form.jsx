@@ -15,15 +15,16 @@ export class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     this.props.onSubmit(this.state);
+
     e.target.elements.name.value = '';
     e.target.elements.number.value = '';
   };
 
   render() {
     return (
-      <Box p={10}>
-        <h1>Phonebook</h1>
+      <Box>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name
