@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Form } from './Form/Form';
+import { ContactForm } from './Form/Form';
 import { ContactList } from './ContactList/ContactList';
 import { Box } from './Box';
 import { Filter } from './Filter/Filter';
@@ -44,7 +44,7 @@ export class App extends Component {
       <Box p={10}>
         <h2>Phonebook</h2>
 
-        <Form onSubmit={this.handleSubmitForm}></Form>
+        <ContactForm onSubmit={this.handleSubmitForm}></ContactForm>
 
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.changeFilter} />
