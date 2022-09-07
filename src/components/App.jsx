@@ -44,7 +44,7 @@ export class App extends Component {
       <Box p={10}>
         <h2>Phonebook</h2>
 
-        <ContactForm onSubmit={this.handleSubmitForm}></ContactForm>
+        <ContactForm onSubmit={this.handleSubmitForm} />
 
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.changeFilter} />
@@ -52,7 +52,7 @@ export class App extends Component {
         <ContactList
           contacts={visibleContacts}
           onDeleteBtn={this.onDeleteContact}
-        ></ContactList>
+        />
       </Box>
     );
   }
